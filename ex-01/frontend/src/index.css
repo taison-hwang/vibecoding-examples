@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Custom background and theme setup */
+body {
+  font-family: var(--font-sans);
+  background-color: #0a0e17;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(224, 64%, 20%, 0.35) 0, transparent 60%),
+    radial-gradient(at 100% 0%, hsla(263, 80%, 50%, 0.1) 0, transparent 40%),
+    radial-gradient(at 100% 100%, hsla(253, 16%, 7%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+  color: #f1f5f9;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Remove default main layout rules of scaffolded template */
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  border-inline: none !important;
+  min-height: 100vh !important;
+  display: block !important;
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Custom scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* Glowing text and buttons */
+.text-glow {
+  text-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+}
+
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 55%
+  );
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+}
+
+.glow-btn:hover::after {
+  transform: translate(50%, 50%) rotate(45deg);
+}
+
+/* Custom markdown content styles for right panel */
+.markdown-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.markdown-body ul {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.markdown-body li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.markdown-body li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: #818cf8;
+  font-weight: bold;
+}
+
+.markdown-body strong {
+  color: #818cf8;
+  font-weight: 600;
+}
