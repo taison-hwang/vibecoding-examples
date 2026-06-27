@@ -69,3 +69,54 @@ GMAIL_APP_PASS는 이미 확보헤 놓았음!
 - 사용자의 발화는 그대로 보존하고, 에이전트의 작업은 핵심 위주로 요약한 본 버전(`conversation_history_summarized.md`)을 추가로 생성하여 저장 완료했습니다.
 
 ---
+
+## 👤 User Request 7
+> 서버를 재실행해주세요
+
+## 🤖 Agent Action Summary
+- HTML5 `MediaRecorder` API를 활용하여 브라우저에서 직접 마이크 음성을 입력받아 실시간 녹음하는 기능을 개발했습니다.
+- 텍스트 직접 입력, 파일 드래그앤드롭 업로드, 마이크 실시간 녹음을 손쉽게 전환할 수 있는 인풋 모드 탭 컨트롤러를 `SummaryForm.tsx`에 추가했습니다.
+- 녹음 중일 때 웨이브폰 애니메이션과 타이머 카운트가 표시되며, 녹음 중지 시 해당 데이터가 음성 파일(`recorded_scrum_*.webm`)로 자동 가공되어 AI 요약의 입력 데이터로 세팅되도록 연동했습니다.
+
+---
+
+## 👤 User Request 8
+> @[/Users/hwangtaeseung/CodeJobs/projects/root-consulting/ai-edu/vibecode-examples/ex-02/docs/prompts-in-ag]  안에 지금 이참의 모든 프롬프트 및 에이전트 응답및 진행 상활을 md파일로 저장해주세요.
+
+## 🤖 Agent Action Summary
+- 마이크 녹음 관련 오디오 전송의 원활한 통신 및 백엔드 네트워크 상태 확인을 위해 개발 서버를 안정적으로 재기동했습니다.
+- 브라우저 subagent 자동화 테스트를 실행하여, 탭 선택 및 실시간 마이크 녹음(4초 이상), 오디오 파일 생성 및 요약 버튼 활성화까지의 전 과정을 성공적으로 검증했습니다.
+
+---
+
+## 👤 User Request 9
+> 방금 생성한 내용중 사용자의 발화는 그대로 에이전트의 응답은 요약한 버전으로 하나 더만들어 주세요
+
+## 🤖 Agent Action Summary
+- Google AI Studio 서버 트래픽 폭주로 인한 Gemini 503 (Unavailable) 일시적 장해 현상에 대한 대처 요령(재시도 버튼 클릭 유도, 혹은 `.env` 내 API Key 일시 주석 처리 후 Mock 모드 전환 가이드)을 설명드렸습니다.
+
+---
+
+## 👤 User Request 10
+> 오디오를 마이크로 입력 받아 처리하는 기능도 추가해주세요.
+
+## 🤖 Agent Action Summary
+- 에이전트 구동 모델(Gemini 3.5 Flash) 및 미니 앱 백엔드가 호출하던 모델(Gemini 2.5 Flash)에 대해 안내해드렸습니다.
+
+---
+
+## 👤 User Request 11
+> 서버를 재시작해주세요.
+
+## 🤖 Agent Action Summary
+- 요약 백엔드 서비스의 API 호출 엔드포인트를 최신 `gemini-3.5-flash` 모델로 교체하고, URD/ADR 설계 문서의 기술 스택 사양도 이에 맞추어 동기화했습니다.
+
+---
+
+## 👤 User Request 12
+> Gemini API call failed with status 503: { "error": { "code": 503, "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.", "status": "UNAVAILABLE" } }
+
+## 🤖 Agent Action Summary
+- 실행 중이던 Express 백엔드와 Vite 프론트엔드 개발 서버 백그라운드 프로세스를 모두 안전하게 종료했습니다.
+
+---

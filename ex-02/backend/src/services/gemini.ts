@@ -19,7 +19,7 @@ function getMockSummary(): Promise<SummaryResponse> {
 
 async function callGeminiApi(prompt: string): Promise<SummaryResponse> {
   const apiKey = process.env.GEMINI_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`;
 
   const payload = {
     contents: [
@@ -77,7 +77,7 @@ async function callGeminiApi(prompt: string): Promise<SummaryResponse> {
 
 async function callGeminiApiWithAudio(prompt: string, base64Data: string, mimeType: string): Promise<SummaryResponse> {
   const apiKey = process.env.GEMINI_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`;
 
   const payload = {
     contents: [
