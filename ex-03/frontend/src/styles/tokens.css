@@ -1,0 +1,16 @@
+@theme {
+  --color-bg-main: #0f172a;        /* Slate 900 */
+  --color-card-bg: #1e293b;        /* Slate 800 */
+  --color-border-color: #334155;   /* Slate 700 */
+  
+  --color-primary: #3b82f6;        /* Cyber Blue */
+  --color-primary-hover: #2563eb;
+  --color-success: #10b981;        /* Emerald Green */
+  --color-danger: #ef4444;         /* Rose Red */
+  
+  --color-text-main: #f8fafc;      /* Slate 50 */
+  --color-text-muted: #94a3b8;     /* Slate 400 */
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius-md: 0.5rem;
+}

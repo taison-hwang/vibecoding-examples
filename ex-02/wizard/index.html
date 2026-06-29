@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바이브코딩 위자드 — AI 스크럼 회의록 요약기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- 사이드바: 단계 네비게이션 -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">VC</div>
+          <div>
+            <div class="brand-title">바이브코딩 위자드</div>
+            <div class="brand-sub">스크럼 회의록 요약기</div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar"><span id="progressFill"></span></div>
+          <div class="progress-text" id="progressText">0 / 0 단계</div>
+        </div>
+
+        <nav class="nav" id="nav"><!-- JS로 채움 --></nav>
+
+        <div class="sidebar-foot">
+          <a href="./README.md" class="foot-link">사용 안내 (README)</a>
+        </div>
+      </aside>
+
+      <!-- 메인 -->
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1 id="projectTitle"></h1>
+            <p id="projectSubtitle" class="muted"></p>
+          </div>
+        </header>
+
+        <section class="stage" id="stage"><!-- JS로 채움 --></section>
+
+        <footer class="stepnav">
+          <button class="btn ghost" id="prevBtn">← 이전 단계</button>
+          <div class="stepnav-center" id="stepDots"></div>
+          <button class="btn primary" id="nextBtn">다음 단계 →</button>
+        </footer>
+      </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="./assets/marked.min.js"></script>
+    <script src="./data/prompts.js"></script>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
